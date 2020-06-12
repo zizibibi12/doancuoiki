@@ -75,7 +75,7 @@ button:focus {
     font-size: 20px;
     display: block;
     text-align: center !important;
-    text-transform: uppercase !important;
+    text-transform: uppercase;
     margin: 10px auto 2px auto !important;
     color: var(--green) !important;
 }
@@ -1230,12 +1230,12 @@ li.drop:hover .drop-menu {
 #tt-spham .product-detail{
     padding-top: 40px;
 }
-#tt-spham .product-detail .cost{
+.cost{
     margin: 30px 0px 10px 0px;
     color: red;
     font-size: 18px;
 }
-#tt-spham .qtyminus, #tt-spham .qtyplus {
+.qtyminus, .qtyplus {
     width: 34px;
     height: 34px;
     text-align: center;
@@ -1247,7 +1247,7 @@ li.drop:hover .drop-menu {
     border: 0.5px solid lightgrey;
     background-color: #fff;
 }
-#tt-spham .qty {
+.qty {
     width: 30px;
     text-align: center;
     border: none;
@@ -1293,4 +1293,16 @@ li.drop:hover .drop-menu {
 }
 #giohangtrong, #thanhtoan-tcong{
     margin: 50px 0px;
+}
+
+#thanhtoan .tt-donhang{
+    background-color: #fff;
+    -webkit-box-shadow: -5px 0px 10px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 0px 10px -7px rgba(0,0,0,0.75);
+    box-shadow: -5px 0px 10px -7px rgba(0,0,0,0.75);
+}
+
+#thanhtoan .tt-donhang h5.title-main{
+    padding-top: 20px;
+    padding-bottom: 50px;
 }

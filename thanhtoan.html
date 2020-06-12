@@ -365,34 +365,103 @@
 <div id="thanhtoan">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-lg-6">
-                <div class="text-left title-index-listspham my-5">
+            <div class="col-md-12 col-lg-5 tt-giaohang">
+                <div class="text-center title-index-listspham my-5">
                     <h4 class="text-uppercase m-0">Thanh toán</h4>
                     <img style="width: 25%; height: 8px" class="mb-3" src="img/gioithieu/underline-title.png" alt="">
-                    <form>
-                        <div class="form-check">
-                            <input type="radio" name="gender" class="form-check-input bounce" id="COD"/>
-                            <label class="form-check-label" for="COD">Ship COD</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="gender" class="form-check-input bounce" id="ck"/>
-                            <label class="form-check-label" for="ck">Chuyển khoản</label>
-                        </div>
-                    </form>
-                    <form>
-                        <div class="form-check">
-                            <input type="radio" name="gender" class="form-check-input bounce" id="viêtl"/>
-                            <label class="form-check-label" for="vietel">Viettel post (3-4 ngày)</label>
-                            <p></p>
-                        </div>
-                    </form>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                    </ul>
                 </div>
+                <h5 class="">Thông tin giao hàng</h5>
+                <form>
+                    <div class="form-check">
+                        <input type="radio" name="gender" class="form-check-input bounce" id="COD"/>
+                        <label class="form-check-label" for="COD">Ship COD</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="gender" class="form-check-input bounce" id="chuyentien"/>
+                        <label class="form-check-label" for="chuyentien">Thanh toán chuyển khoản</label>
+                    </div>
+                </form>
+                <h5 class="">Hình thức vận chuyển</h5>
+                <form>
+                    <div class="form-check">
+                        <input type="radio" name="gender" class="form-check-input bounce" id="viêtl"/>
+                        <label class="form-check-label" for="vietel">Viettel post (3-4 ngày)</label>
+                        <h6 class="text-black-50">(Hiện tại tiệm chỉ sử dung dịch vụ chuyển phát viettel post và chưa sử
+                            dụng dịch vụ chuyển phát nào khác mong quý khách thông cảm vì sự bất tiện này)</h6>
+                    </div>
+                </form>
+                <h5 class="">Thông tin giao hàng</h5>
+                <ul class="list-unstyled">
+                    <li class="text-uppercase">Nguyễn Văn Tiến</li>
+                    <li>0362893400</li>
+                    <li>7 ngõ 17 Tăng Thiết Giáp, Cổ Nhuế, Hà Nội</li>
+                </ul>
             </div>
-            <div class="col-md-12 col-lg-6"></div>
+            <div class="col-md-12 col-lg-7 tt-donhang">
+                <h5 class="title-main">Đơn hàng</h5>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="" alt="" class="img-fluid"></div>
+                    <div class="col-lg-4">
+                        <div class="m-auto">
+                            <p class="m-0">Áo dài nam đầu lân thêu</p>
+                            <p class="m-0">size M</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <form class="input-group m-auto" action="#">
+                            <div class="qtyminus">-</div>
+                            <input type="text" name="quantity" value="1" class="qty">
+                            <div class="qtyplus">+</div>
+                        </form>
+                    </div>
+                    <div class="col-lg-2">
+                        <p class="cost m-auto">1.800.000</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="" alt="" class="img-fluid"></div>
+                    <div class="col-lg-4">
+                        <div class="m-auto">
+                            <p class="m-0">Áo dài nam đầu lân thêu</p>
+                            <p class="m-0">size M</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <form class="input-group m-auto" action="#">
+                            <div class="qtyminus">-</div>
+                            <input type="text" name="quantity" value="1" class="qty">
+                            <div class="qtyplus">+</div>
+                        </form>
+                    </div>
+                    <div class="col-lg-2">
+                        <p class="cost m-auto">1.800.000</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="" alt="" class="img-fluid"></div>
+                    <div class="col-lg-4">
+                        <div class="m-auto">
+                            <p class="m-0">Áo dài nam đầu lân thêu</p>
+                            <p class="m-0">size M</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <form class="input-group m-auto" action="#">
+                            <div class="qtyminus">-</div>
+                            <input type="text" name="quantity" value="1" class="qty">
+                            <div class="qtyplus">+</div>
+                        </form>
+                    </div>
+                    <div class="col-lg-2">
+                        <p class="cost m-auto">1.800.000</p>
+                    </div>
+                </div>
+                <hr>
+
+            </div>
         </div>
     </div>
 </div>
@@ -929,6 +998,21 @@
         $("." + clase).removeClass("active");
         $(this).addClass("active");
     })
+    $(".qtyminus").on("click", function () {
+        var now = $(".qty").val();
+        if ($.isNumeric(now)) {
+            if (parseInt(now) - 1 > 0) {
+                now--;
+            }
+            $(".qty").val(now);
+        }
+    })
+    $(".qtyplus").on("click", function () {
+        var now = $(".qty").val();
+        if ($.isNumeric(now)) {
+            $(".qty").val(parseInt(now) + 1);
+        }
+    });
 </script>
 </body>
 </html>
