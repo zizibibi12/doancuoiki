@@ -50,7 +50,9 @@ a i:hover {
 b {
     font-weight: bold;
 }
-
+p {
+    font-size: 14px;
+}
 button.button-menuleft {
     font-size: 27px;
     border: none;
@@ -112,34 +114,13 @@ button:focus {
     webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
 }
-
-/*drop-menu*/
-.drop {
-    position: relative;
-    display: inline-block;
+input[type="password" i] {
+    font-family: "Arial Black";
 }
-
-.drop-menu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+img.zoom-hover:hover{
+    transition: .3s ease-in-out;
+    transform: scale(1.01);
 }
-
-.drop-menu a {
-    color: var(--maincolor);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-li.drop:hover .drop-menu {
-    display: block;
-}
-
-/*end drop-menu*/
 @media screen and (max-width: 414px) {
     h6.nav-link {
         font-size: 12px;
@@ -340,27 +321,6 @@ li.drop:hover .drop-menu {
     background-color: #fff;
 }
 
-/*css menu demo2*/
-#menubar2 .navbar {
-    box-shadow: none;
-}
-
-#menubar2 .navbar-collapse {
-    height: 100px;
-}
-
-#menubar2 .navbar a.navbar-bran {
-    position: absolute;
-    right: auto;
-    margin-right: 0px;
-}
-
-#menubar2 .navbar .nav-link {
-    color: var(--maincolor);
-}
-
-/*end css menu demo2*/
-
 /*css menu demo1*/
 #menubar1 .nav {
     box-shadow: none;
@@ -403,25 +363,49 @@ li.drop:hover .drop-menu {
     color: var(--maincolor);
 }
 
-/*end css menubar1*/
-/*end css menubar*/
-#banner .content {
-    position: absolute;
-    display: none;
-    top: 282px;
-    width: 917px;
-    height: 280px;
-    background-color: rgba(205, 163, 79, 0.5);
-    border-radius: 5px;
-    filter: brightness(100%);
-    transition: all;
-    opacity: 1;
-    transform: translateX(0px);
+/*drop-menu*/
+.drop {
+    position: relative;
+    display: inline-block;
 }
 
+.drop-menu {
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: visibility 0.1s, transform 0.3s ease-in-out, opacity 0.4s;
+}
+
+.drop-menu a {
+    color: var(--maincolor);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+li.drop:hover .drop-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-20px);
+}
+li.drop:hover .drop-item{
+    visibility: visible;
+}
+.drop-item{
+    visibility: hidden;
+    transition: all 0.1s;
+}
+/*end drop-menu*/
+/*end css menubar1*/
+/*end css menubar*/
+
 /******css about*/
-#about {
-    padding: 10% 0px;
+#about, #sanpham {
+    padding: 50px 0px;
 }
 
 @media screen and (max-width: 991px) {
@@ -454,36 +438,72 @@ li.drop:hover .drop-menu {
 
 /*end css about*/
 @media screen and (max-width: 768px) {
-    #sanpham img.img-fluid {
-        margin-top: 30px;
+    .link-hover {
+        margin-bottom: 25px;
     }
 }
-#sanpham .row .gadient-dmuc {
-    position: absolute;
-    background: rgb(99,107,70);
-    background: linear-gradient(0deg, rgba(99,107,70,1) 0%, rgba(99,107,70,0) 100%);
-    bottom: 0px;
-    height: 130px;
-    width: 98%;
-    border-radius: 0px 0px 6px 6px;
-    margin: 0px 2px;
+
+#sanpham .title-hover h1{
+    color: #fff;
+    margin: auto;
+    width: 60%;
+    text-align: right;
+    visibility: visible;
 }
-#sanpham .row .dmuc-spham{
+#sanpham .link-hover:hover .title-hover h1{
+    padding: 5px;
+    border: 1px solid white;
+    width: unset;
+}
+.link-hover{
     position: relative;
 }
-#sanpham .row .dmuc-spham .gadient-dmuc h2{
-    text-align: end;
-    color: #ffffff;
-    margin: 10%;
+.title-hover a{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(99,107,70,1) 0%, rgba(99,107,70,0) 100%);
+    transition: all 0.5s ease-in-out;
 }
-#sanpham .row .dmuc-spham:hover > .gadient-dmuc{
-    height: 100%;
-    padding: 0px;
+.title-hover h5{
+    color: #fff;
+    transition: all 0.1s ease-in, visibility 0.5s cubic-bezier(1, -0.37, 1, -0.35);
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    visibility: visible;
 }
-#sanpham .row .dmuc-spham:hover > .gadient-dmuc h2{
-    margin-top: 45%;
+.title-hover h4{
+    color: #fff;
+    transition: visibility 0.5s cubic-bezier(1, -0.22, 0, 1.26);
+    margin: auto;
+    width: 60%;
+    text-align: center;
     border: 1px solid white;
+    padding: 5px;
+    visibility: hidden;
 }
+.link-hover:hover .title-hover a{
+    height: 100%;
+}
+.link-hover:hover .title-hover h5{
+    visibility: hidden;
+    transition: visibility 0.1s;
+}
+.link-hover:hover .title-hover h4{
+    visibility: visible !important;
+}
+
+/*#sanpham .dmuc-spham:hover > .gadient-dmuc h2{*/
+/*    border: 1px solid white;*/
+/*    padding: 5px;*/
+/*    top: 30%;*/
+/*    left: 25%;*/
+/*    right: unset;*/
+/*}*/
 /*******collection*/
 @media screen and (max-width: 1024px) {
     #mixedSlider {
@@ -507,7 +527,7 @@ li.drop:hover .drop-menu {
     padding: 5px 0px;
     min-height: 700px;
     background-image: url(../img/background/collection-nen.png);
-    background-repeat: repeat-y;
+    background-repeat: repeat;
 }
 
 #collection .ct-left {
@@ -532,12 +552,19 @@ li.drop:hover .drop-menu {
 }
 
 /*css slide san pham*/
+@media screen and (min-width: 1440px){
+    #mixedSlider{
+        margin: 4% auto !important;
+        max-width: unset !important;
+    }
+}
 #mixedSlider {
+    left: 5%;
     max-width: 712px;
     width: auto;
     position: absolute;
-    margin: 10% auto;
-    min-height:;
+    margin: 8% auto;
+    height: auto;
 }
 
 #mixedSlider .MS-content {
@@ -553,7 +580,7 @@ li.drop:hover .drop-menu {
     position: relative;
     vertical-align: top;
     overflow: hidden;
-    max-height: 562px;
+    max-height: 522px;
     white-space: normal;
     padding: 0 10px;
     text-align: center;
@@ -713,23 +740,38 @@ li.drop:hover .drop-menu {
     background-color: #fff;
     min-height: 500px;
 }
+#news .gadient-dmuc{
+    width: 91%;
+    left: 17%;
+}
 
+@media screen and (max-width: 1200px)  {
+    #news .gadient-dmuc{
+        width: 90%;
+    }
+    #sanpham .gadient-dmuc-hover h2{
+        left: 15%;
+    }
+}
 @media screen and (max-width: 991px) {
     #footer, #footer .info-footer p {
-        text-align: center !important;
         font-size: 12px;
+        text-align: center !important;
         margin: auto;
         padding-left: 0px !important;
         padding-top: 0px !important;
     }
-
-    #footer .info-footer p {
-    }
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     #footer .get-NEWS {
         text-align: center !important;
+    }
+    #footer .link{
+        padding-top: 5% !important;
+    }
+    #footer .get-NEWS{
+        padding-left: 0px !important;
+        padding-top: 2% !important;
     }
 }
 
@@ -740,7 +782,7 @@ li.drop:hover .drop-menu {
 #footer {
     background-color: var(--maincolor);
     min-height: 300px;
-    padding-bottom: 30px;
+    padding-bottom: ;
 }
 
 #footer .link {
@@ -861,19 +903,26 @@ li.drop:hover .drop-menu {
 
 
 /*css index-collection*/
-#index-collection {
+#index-tintuc {
     padding: 20px 0px;
-    margin: 60px 0px;
+    margin: 5% 0px;
 }
 
-#index-collection .img-bst img {
+#index-tintuc .img-bst img {
     margin-bottom: 35px;
     width: 99%;
 }
-
+#index-tintuc .tintuc{
+    margin-bottom: 30px;
+}
 /*end css index-collection*/
 
 /*css contact*/
+@media screen and (max-width: 768px){
+    #index-contact .border-right{
+        border-right: unset!important;
+    }
+}
 #index-contact {
     padding: 20px 0px 0px 0px;
     margin: 60px 0px 0px 0px;
@@ -888,6 +937,8 @@ li.drop:hover .drop-menu {
 
 #index-contact .tt img {
     margin-bottom: 20px;
+    width: 90px;
+    height: 90px;
 }
 
 #index-contact .freeback {
@@ -958,7 +1009,9 @@ li.drop:hover .drop-menu {
 #chitiet-tintuc-noibat {
     margin-bottom: 70px;
 }
-
+#detail-tintuc p {
+    font-size: 18px;
+}
 @media screen and (max-width: 1024px) {
     #detail-tintuc .detail-img2 .detail-content-img2 {
         margin: 0px auto;
@@ -1132,7 +1185,7 @@ li.drop:hover .drop-menu {
 }
 #canhan .content-canhan .content-top{
     position: absolute;
-    width: 80%;
+    width: 75%;
     height: 600px;
     background-color: #fff;
     top: 0px;
@@ -1140,9 +1193,14 @@ li.drop:hover .drop-menu {
     webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
 }
+#canhan .content-canhan img.avatar{
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+}
 #canhan .content-canhan .content-top .content-canhan, #canhan .content-tt-donhang{
-    margin-top: 30px;
-    margin-left: 60px;
+    margin-top: 5%;
+    margin-left: 5%;
 }
 #canhan table {
     border-collapse: collapse;
@@ -1176,6 +1234,26 @@ li.drop:hover .drop-menu {
 #canhan .tt-donhang .tonggia table{
     width: 50%;
     margin-left: auto;
+}
+#canhan .content-canhan2{
+    background-color: #fff;
+}
+
+#canhan .content-canhan2 .nav-item a.nav-link{
+    color: var(--maincolor);
+    text-transform: uppercase;
+}
+#canhan .content-canhan2 .nav-item a.active{
+    color: #fff;
+    border: none;
+    background-color: var(--maincolor);
+    border-radius: unset;
+}
+@media screen and (max-width: 991px){
+    #canhan{
+        max-height: 750px;
+        height: auto;
+    }
 }
 .topbanchay, .tintucnoibat{
     margin-top: 50px;
@@ -1305,4 +1383,7 @@ li.drop:hover .drop-menu {
 #thanhtoan .tt-donhang h5.title-main{
     padding-top: 20px;
     padding-bottom: 50px;
+}
+#tintuc-noibat{
+    margin: 50px 0px;
 }
