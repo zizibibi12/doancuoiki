@@ -824,11 +824,7 @@ li.drop:hover .drop-item{
     position: unset;
     margin-bottom: 20px;
 }
-#banner-gioi-thieu .flame {
-    position: relative!important;
-    height: 80px;
-    width: 100%;
-}
+
 #banner-gioi-thieu .bannermain-gioithieu {
     border: #fff solid 25px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -850,6 +846,17 @@ li.drop:hover .drop-item{
     width: 30%;
     bottom: 0%;
     right: 30%;
+}
+
+#banner-gioi-thieu .flame {
+    position: relative!important;
+    height: 80px;
+    width: 100%;
+}
+@media screen and (max-width: 768px){
+    #banner-gioi-thieu .flame {
+        height: 80px;
+    }
 }
 @media screen and (min-width: 2560px){
     #banner-gioi-thieu .flame{
@@ -887,9 +894,10 @@ li.drop:hover .drop-item{
     text-align: right;
     text-transform: uppercase;
 }
-
-#content1 .thut, #content3 .thut {
-    padding: 0px 15%;
+@media screen and (min-width: 1024px) {
+    #content1 .thut, #content3 .thut {
+        padding: 0px 15%;
+    }
 }
 
 #content2 {
