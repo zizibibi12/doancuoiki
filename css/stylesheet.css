@@ -826,7 +826,7 @@ li.drop:hover .drop-item{
 }
 #banner-gioi-thieu .flame {
     position: relative!important;
-    height: 330px;
+    height: 80px;
     width: 100%;
 }
 #banner-gioi-thieu .bannermain-gioithieu {
@@ -853,25 +853,25 @@ li.drop:hover .drop-item{
 }
 @media screen and (min-width: 2560px){
     #banner-gioi-thieu .flame{
-        height: 600px !important;
+        height: 600px;
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
     #banner-gioi-thieu .flame{
-        height: 150px !important;
+        height: 150px;
     }
     #content1 h1 {
         text-align: center !important;
     }
 }
-@media screen and (max-width: 600px){
+@media screen and (min-width: 600px){
     #banner-gioi-thieu .flame{
-        height: 70px !important;
+        height: 70px;
     }
 }
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 1024px){
     #banner-gioi-thieu .flame{
-        height: 200px !important;
+        height: 200px;
     }
 }
 
