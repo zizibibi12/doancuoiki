@@ -464,7 +464,7 @@
                     <img src="img/gioithieu/NEWS1.png" alt="" class="img-fluid w-100">
                     <div class="title-hover">
                         <a href="chitiet-tintuc.html"><h4 class="">Xem thêm</h4></a>
-                        <a href="chitiet-tintuc.html"><h5 class="">Bộ sưu tập FLY "Linh hồn Đại Việt"</h5></a>
+                        <a href="chitiet-tintuc.html" class="hover-h5"><h5 class="">Bộ sưu tập FLY "Linh hồn Đại Việt"</h5></a>
                     </div>
                 </div>
             </div>
@@ -473,7 +473,7 @@
                     <img src="img/gioithieu/NEWS2.png" alt="" class="img-fluid w-100">
                     <div class="title-hover">
                         <a href="chitiet-tintuc.html"><h4 class="">Xem thêm</h4></a>
-                        <a href="chitiet-tintuc.html"><h5 class="">Câu truyện lòng của chủ tiệm</h5></a>
+                        <a href="chitiet-tintuc.html" class="hover-h5"><h5 class="">Câu truyện lòng của chủ tiệm</h5></a>
                     </div>
                 </div>
             </div>
@@ -482,14 +482,13 @@
                     <img src="img/gioithieu/NEWS3.png" alt="" class="img-fluid w-100">
                     <div class="title-hover">
                         <a href="chitiet-tintuc.html"><h4 class="">Xem thêm</h4></a>
-                        <a href="chitiet-tintuc.html"><h5 class="">Bộ sưu tập MAGICS "Trí tưởng tượng"</h5></a>
+                        <a href="chitiet-tintuc.html" class="hover-h5"><h5 class="">Bộ sưu tập MAGICS "Trí tưởng tượng"</h5></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <!--footer-->
 <div id="footer">
     <div class="container">
@@ -613,6 +612,20 @@
             }
         });
     });
+
+    function changeText(text)
+    {
+        var display = document.getElementById('text-display');
+        display.innerHTML = "";
+        display.innerHTML = ;
+    }
+
+    function defaultText()
+    {
+        var display = document.getElementById('text-display');
+        display.innerHTML = "";
+        display.innerHTML = "What would you like to do?";
+    }
 
     // slider collection
     (function ($) {

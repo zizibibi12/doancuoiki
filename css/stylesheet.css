@@ -459,14 +459,17 @@ li.drop:hover .drop-item{
     position: relative;
 }
 .title-hover a{
-    position: absolute;
     width: 100%;
     height: 100px;
     bottom: 0px;
     display: flex;
+    position: absolute;
     align-items: center;
+    transition: all 0.4s ease-in-out;
     background: linear-gradient(0deg, rgba(99,107,70,1) 0%, rgba(99,107,70,0) 100%);
-    transition: all 0.5s ease-in-out;
+}
+.link-hover:hover a.hover-h5 {
+    visibility: hidden;
 }
 .title-hover h5{
     color: #fff;
@@ -814,33 +817,70 @@ li.drop:hover .drop-item{
 /******css index about******/
 #gioi-thieu {
     color: var(--mauchu);
+    display: block;
 }
 
 #banner-gioi-thieu {
-    max-height: 1330px;
+    position: unset;
+    margin-bottom: 20px;
 }
-
+#banner-gioi-thieu .flame {
+    position: relative!important;
+    height: 330px;
+    width: 100%;
+}
 #banner-gioi-thieu .bannermain-gioithieu {
     border: #fff solid 25px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-#banner-gioi-thieu img.banner1 {
-    width: 90%;
-    position: relative;
-    top: -300px;
+#banner-gioi-thieu .banner1 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+#banner-gioi-thieu .banner1 img{
+    width: 70%;
     margin: 0px auto;
     display: block;
 }
 
 #banner-gioi-thieu img.banner2 {
-    position: relative;
-    display: block;
-    margin: auto;
-    top: -500px;
-    right: -200%;
+    position: absolute;
+    width: 30%;
+    bottom: 0%;
+    right: 30%;
+}
+@media screen and (min-width: 2560px){
+    #banner-gioi-thieu .flame{
+        height: 600px !important;
+    }
+}
+@media screen and (max-width: 768px){
+    #banner-gioi-thieu .flame{
+        height: 150px !important;
+    }
+    #content1 h1 {
+        text-align: center !important;
+    }
+}
+@media screen and (max-width: 600px){
+    #banner-gioi-thieu .flame{
+        height: 70px !important;
+    }
+}
+@media screen and (max-width: 1024px){
+    #banner-gioi-thieu .flame{
+        height: 200px !important;
+    }
 }
 
+@media screen and (max-width: 991px) {
+    #content2 .right h1 {
+        text-align: center !important;
+        margin: auto;
+    }
+}
 #content1 h1 {
     font-size: 36px;
     font-weight: bold;
@@ -848,8 +888,8 @@ li.drop:hover .drop-item{
     text-transform: uppercase;
 }
 
-#content1 .container {
-    padding: 0px 250px;
+#content1 .thut, #content3 .thut {
+    padding: 0px 15%;
 }
 
 #content2 {
@@ -870,9 +910,7 @@ li.drop:hover .drop-item{
     font-weight: bold;
 }
 
-#content3 .container {
-    padding: 3% 15%;
-}
+
 
 #content3 .content-top {
     text-align: justify;
@@ -889,14 +927,14 @@ li.drop:hover .drop-item{
     margin-bottom: 30px;
 }
 
-#content-img .col-lg-4 {
-    height: fit-content;
+#content-img img {
+    margin-bottom: 30px;
 }
 
 #content-img .sign {
     filter: opacity(60%);
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 25px;
     text-align: center;
     font-weight: bold;
 }
@@ -1096,6 +1134,7 @@ li.drop:hover .drop-item{
 
 #list-spham-index {
     margin-bottom: 70px;
+    min-height: 1500px;
 }
 
 #list-spham-index .right {
