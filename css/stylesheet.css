@@ -450,10 +450,12 @@ li.drop:hover .drop-item{
     text-align: right;
     visibility: visible;
 }
-#sanpham .link-hover:hover .title-hover h1{
-    padding: 5px;
-    border: 1px solid white;
-    width: unset;
+@media screen and (min-width: 1200px) {
+    #sanpham .link-hover:hover .title-hover h1 {
+        padding: 5px;
+        border: 1px solid white;
+        width: unset;
+    }
 }
 .link-hover{
     position: relative;
@@ -468,9 +470,7 @@ li.drop:hover .drop-item{
     transition: all 0.4s ease-in-out;
     background: linear-gradient(0deg, rgba(99,107,70,1) 0%, rgba(99,107,70,0) 100%);
 }
-.link-hover:hover a.hover-h5 {
-    visibility: hidden;
-}
+
 .title-hover h5{
     color: #fff;
     transition: all 0.1s ease-in, visibility 0.5s cubic-bezier(1, -0.37, 1, -0.35);
@@ -489,17 +489,24 @@ li.drop:hover .drop-item{
     padding: 5px;
     visibility: hidden;
 }
-.link-hover:hover .title-hover a{
-    height: 100%;
-}
-.link-hover:hover .title-hover h5{
-    visibility: hidden;
-    transition: visibility 0.1s;
-}
-.link-hover:hover .title-hover h4{
-    visibility: visible !important;
-}
+@media screen and (min-width: 1200px) {
+    .link-hover:hover a.hover-h5 {
+        visibility: hidden;
+    }
 
+    .link-hover:hover .title-hover a {
+        height: 100%;
+    }
+
+    .link-hover:hover .title-hover h5 {
+        visibility: hidden;
+        transition: visibility 0.1s;
+    }
+
+    .link-hover:hover .title-hover h4 {
+        visibility: visible !important;
+    }
+}
 /*#sanpham .dmuc-spham:hover > .gadient-dmuc h2{*/
 /*    border: 1px solid white;*/
 /*    padding: 5px;*/
@@ -1265,11 +1272,11 @@ li.drop:hover .drop-item{
     color: var(--maincolor);
     text-decoration: underline;
 }
-#canhan .lichsu{
+#canhan .content-canhan .lichsu{
     position: relative;
     height: 600px;
 }
-#canhan .lichsu .pagination{
+#canhan .content-canhan .lichsu .pagination{
     position: absolute;
     bottom: 5%;
     right: 5%;
@@ -1298,7 +1305,7 @@ li.drop:hover .drop-item{
 }
 @media screen and (max-width: 991px){
     #canhan{
-        max-height: 750px;
+        min-height: 100px;
         height: auto;
     }
 }

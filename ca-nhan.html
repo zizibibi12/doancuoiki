@@ -379,8 +379,9 @@
                 <div class="lichsu p-5 item" style="display:none" id="canhan-lichsu">
                     <h5 class="text-uppercase">Lịch sử đơn hàng</h5>
                     <hr class="ml-0 mt-0 w-25">
-                    <div class="" style="overflow-x:auto;">
+                    <div class="" style="overflow-x:auto; height: 400px">
                         <table id="page-lsdh-1">
+                            <thead>
                             <tr class="border-bottom">
                                 <th>Mã đơn hàng</th>
                                 <th>Ngày mua hàng</th>
@@ -388,6 +389,8 @@
                                 <th>Tổng tiền</th>
                                 <th>Trạng thái</th>
                             </tr>
+                            </thead>
+                            <tbody style="overflowx:auto; ">
                             <tr>
                                 <td><a onclick="openItem('tt-donhang')" class="ma-don-hang">#357</a></td>
                                 <td>16/02/2019</td>
@@ -430,7 +433,8 @@
                                 <td>1.650.000VND</td>
                                 <td>hoàn thành</td>
                             </tr>
-                        </table>
+                            </tbody>
+                            </table>
                     </div>
                     <ul class="pagination">
                         <li class="bg-white page-item disabled"><a class="border page-link" href="#"><i
@@ -441,7 +445,7 @@
                                 class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
-                <div class="tt-donhang p-5 item position-relative" style="display: none" id="tt-donhang">
+                <div class="tt-donhang p-5 item" style="display: none" id="tt-donhang">
                     <h5 class="text-uppercase d-inline-block mr-3">Đơn hàng #357</h5>-<h6 class="ml-2 d-inline-block">Đã
                     hoàn thành</h6>
                     <hr class="ml-0 mt-0 w-25">
@@ -512,7 +516,7 @@
             </div>
         </div>
     </div>
-    <div class="content-canhan2 d-block d-lg-none">
+    <div class="content-canhan2 d-block d-md-block d-lg-none">
         <ul class="nav nav-tabs justify-content-center d-flex" id="myTabEx" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active show" id="home-tab-ex" data-toggle="tab" href="#home-ex" role="tab"
@@ -581,17 +585,19 @@
                 </div>
                 <div class="tab-pane fade" id="profile-ex" role="tabpanel" aria-labelledby="profile-tab-ex">
                     <div class="doimatkhau item" id="canhan-doimatkhau">
-                        <div class="md-form ml-5">
+                        <div class="md-form">
                             <input style="font-family: Arial" type="password" id="materialLoginFormPassword1"
                                    class="form-control">
                             <label for="materialLoginFormPassword1">Mật khẩu mới:</label>
                         </div>
-                        <div class="md-form mt-2 ml-5">
+                        <div class="md-form mt-2">
                             <input style="font-family: Arial" type="password" id="materialLoginFormPassword2"
                                    class="form-control">
                             <label for="materialLoginFormPassword2">Nhập lại mật khẩu:</label>
                         </div>
-                        <input class="btn mt-4 ml-5" type="submit" value="Thay đổi">
+                        <div class="d-flex justify-content-center">
+                        <button class="btn mt-4" type="submit">Thay đổi</button>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="contact-ex" role="tabpanel" aria-labelledby="contact-tab-ex">
@@ -606,7 +612,8 @@
                                     <th>Trạng thái</th>
                                 </tr>
                                 <tr>
-                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab" href="#tt-donhang-ex" role="tab"
+                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab"
+                                           href="#tt-donhang-ex" role="tab"
                                            aria-controls="contact-ex"
                                            aria-selected="false">#357</a></td>
                                     <td>16/02/2019</td>
@@ -615,7 +622,8 @@
                                     <td>hoàn thành</td>
                                 </tr>
                                 <tr>
-                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab" href="#tt-donhang-ex" role="tab"
+                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab"
+                                           href="#tt-donhang-ex" role="tab"
                                            aria-controls="contact-ex"
                                            aria-selected="false">#357</a></td>
                                     <td>16/02/2019</td>
@@ -624,7 +632,8 @@
                                     <td>hoàn thành</td>
                                 </tr>
                                 <tr>
-                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab" href="#tt-donhang-ex" role="tab"
+                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab"
+                                           href="#tt-donhang-ex" role="tab"
                                            aria-controls="contact-ex"
                                            aria-selected="false">#357</a></td>
                                     <td>16/02/2019</td>
@@ -633,7 +642,8 @@
                                     <td>hoàn thành</td>
                                 </tr>
                                 <tr>
-                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab" href="#tt-donhang-ex" role="tab"
+                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab"
+                                           href="#tt-donhang-ex" role="tab"
                                            aria-controls="contact-ex"
                                            aria-selected="false">#357</a></td>
                                     <td>16/02/2019</td>
@@ -642,7 +652,8 @@
                                     <td>hoàn thành</td>
                                 </tr>
                                 <tr>
-                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab" href="#tt-donhang-ex" role="tab"
+                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab"
+                                           href="#tt-donhang-ex" role="tab"
                                            aria-controls="contact-ex"
                                            aria-selected="false">#357</a></td>
                                     <td>16/02/2019</td>
@@ -651,7 +662,8 @@
                                     <td>hoàn thành</td>
                                 </tr>
                                 <tr>
-                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab" href="#tt-donhang-ex" role="tab"
+                                    <td><a class="nav-link ma-don-hang" id="tt-donhang-tab-ex" data-toggle="tab"
+                                           href="#tt-donhang-ex" role="tab"
                                            aria-controls="contact-ex"
                                            aria-selected="false">#357</a></td>
                                     <td>16/02/2019</td>
@@ -701,14 +713,16 @@
                                             <th>Tạm tính</th>
                                         </tr>
                                         <tr>
-                                            <td><a class="text-cmain" href="tt-spham.html">Áo dài nam đầu lân thêu</a></td>
+                                            <td><a class="text-cmain" href="tt-spham.html">Áo dài nam đầu lân thêu</a>
+                                            </td>
                                             <td>SL:1</td>
                                             <td>1.800.000</td>
                                             <td>0</td>
                                             <td>1.800.000</td>
                                         </tr>
                                         <tr>
-                                            <td><a class="text-cmain" href="tt-spham.html">Áo dài nam đầu lân thêu</a></td>
+                                            <td><a class="text-cmain" href="tt-spham.html">Áo dài nam đầu lân thêu</a>
+                                            </td>
                                             <td>SL:1</td>
                                             <td>1.800.000</td>
                                             <td>0</td>
