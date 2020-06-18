@@ -385,27 +385,28 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 d-none d-sm-none d-md-block">
-                <div class="voucher pt-5">
-                    <img class="img-fluid" src="img/background/Vector%20Smart%20Object.png" alt="">
-                    <div class="content-voucher">
-                        <div class="d-flex justify-content-between">
-                            <div class="font-weight-bold">Tạm tính</div>
-                            <div class="text-right"><span>199.000VND</span></div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <div>Phụ chi</div>
-                            <div class="text-right"><span>-199.000VND</span></div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <div>Phí ship</div>
-                            <div class="text-right"><span>35.000VND</span></div>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between mt-auto">
-                            <div><h5>Tổng</h5></div>
-                            <div class="text-right"><span>199.000VND</span></div>
-                        </div>
+            <div class="d-none d-sm-none d-md-block col-md-1"></div>
+            <div class="col-md-3 d-none d-sm-none d-md-block mt-5">
+                <div class="content-voucher">
+                    <div class="d-flex justify-content-between">
+                        <div class="font-weight-bold">Tạm tính</div>
+                        <div class="text-right"><span>199.000VND</span></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>Phụ chi</div>
+                        <div class="text-right"><span>-199.000VND</span></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>Phí ship</div>
+                        <div class="text-right"><span>35.000VND</span></div>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mt-auto">
+                        <div><h5>Tổng</h5></div>
+                        <div class="text-right"><span>199.000VND</span></div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="thanhtoan-sucess.html" class="btn">Thanh toán</a>
                     </div>
                 </div>
             </div>
@@ -545,7 +546,7 @@
         var price = parseFloat(el.parent().children(".price").html());
         var eq = Math.round(price * qt);
 
-        el.parent().children(".full-price").html( eq + "VND");
+        el.parent().children(".full-price").html(eq + "VND");
 
         changeTotal();
     }

@@ -13,6 +13,7 @@
 body {
     font-family: "iCielBC OldStyle";
     background-image: url(../img/background/background.png);
+    background-color: #fff;
 }
 
 .text-cmain {
@@ -1192,6 +1193,7 @@ li.drop:hover .drop-item {
 
 #list-spham-index .right {
     text-align: center;
+    margin-top: 30px;
 }
 
 #list-spham-index .nav-link:hover {
@@ -1227,7 +1229,7 @@ li.drop:hover .drop-item {
 }
 
 #list-spham-index .right img {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     margin-bottom: 15px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 0.2);
     -moz-box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 110.2);
@@ -1400,17 +1402,34 @@ li.drop:hover .drop-item {
 .topbanchay, .tintucnoibat {
     margin-top: 50px;
 }
+@media screen and (min-width: 1025px) {
+    div.img-hover {
+        overflow: hidden;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 0.2);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 110.2);
+        box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 0.2);
+        margin-bottom: 15px;
+        width: -webkit-fill-available;
+    }
 
-.topbanchay img {
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 0.2);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 110.2);
-    box-shadow: 0px 0px 5px 0px rgba(110, 110, 110, 0.2);
-    margin-bottom: 15px;
-    margin-top: 30px;
-    width: -webkit-fill-available;
+    .topbanchay div.img-hover{
+        height: 418px;
+    }
+    .img-hover.phukien {
+        height: 255px;
+    }
+    div.img-hover{
+        height: 417px;
+    }
+    div.img-hover img {
+        transition: all 0.5s;
+    }
+
+    div.img-hover:hover img {
+        transform: scale(1.2);
+    }
 }
-
 #error-404 {
     margin: 50px 0px;
 }
@@ -1609,23 +1628,30 @@ li.drop:hover .drop-item {
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
-}
-#giohang .voucher{
-    position: relative;
+    border-radius: 7px;
 }
 #giohang .content-voucher{
-    position: absolute;
-    height: 200px;
-    width: 210px;
-    bottom: 0px;
-    padding: 40px 15px;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+    border-radius: 7px;
+    /*background-image: url(../img/background/Vector Smart Object.png Smart Object.png);*/
 }
-@media screen and (min-width: 1024px){
-    #giohang .content-voucher{
-        height: 220px;
-        width: 220px;
-    }
-}
-#giohang .voucher img{
-    height: 200px;
-}
+/*.img-hover{*/
+/*    position: relative;*/
+/*}*/
+/*.add-cart{*/
+/*    position: absolute;*/
+/*    !*visibility: hidden;*!*/
+/*    width: 100%;*/
+/*    bottom: 5%;*/
+/*}*/
+/*.img-hover:hover .add-cart{*/
+/*    !*visibility: visible;*!*/
+/*}*/
